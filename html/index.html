@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+   
+
+
+
+
+    <div class="container"> 
+        <div class="header"> 
+            <p class = lefthead1>Voting for:</p>
+            <img src="Assets/votingicon.png">  
+            <p class = righthead1>#ElectionSZN</p>
+            <hr>
+            <p class = lefthead2>Mayor Election</p>
+            <p class = righthead2>SELECT ONE</p>  
+        </div>
+      
+        <br><br>
+
+        <div class="voters"> 
+            <div class="slot-container" >
+                <div class= "slot">
+                    <div class="slotname">Abdul Alrahim</div>
+                    <div id="slotparty">Independent</div>
+                    <input type="checkbox" name="meister" id="slot1Accept">
+                </div>  
+            </div>  
+
+            <div class="slot-container" >
+                <div class= "slot">
+                    <div class="slotname">Nancy Ree</div>
+                    <div id="slotparty">The Real Nancy Party</div>
+                    <input type="checkbox" name="meister" id="slot2Accept">
+                </div>
+            </div>
+
+            <div class="slot-container" >
+                <div class= "slot">
+                    <div class="slotname">Billy Clarke</div>
+                    <div id="slotparty">The loudest voice Party</div>
+                    <input type="checkbox" name="meister" id="slot3Accept">
+                </div>
+            </div>
+
+            <div class="slot-container" >
+                <div class= "slot">
+                    <div class="slotname">Archie Morris</div>
+                    <div id="slotparty">Downbad Party</div>
+                    <input type="checkbox" name="meister" id="slot4Accept">
+                </div>
+            </div>
+
+            <div class="slot-container" >
+                <div class= "slot">
+                    <div class="slotname">Lewis Patterson</div>
+                    <div id="slotparty">The Patterson family Party</div>
+                    <input type="checkbox" name="meister" id="slot5Accept">
+                </div>
+            </div>
+
+<!--            <div class="slot-container" >                                      -- format of more candidates
+                <div class= "slot">
+                    <div class="slotname">William Edwards</div>
+                    <div id="slotparty">Independent</div>
+                    <input type="checkbox" name="meister" class="slotAccept">
+                </div>
+            </div>
+
+            <div class="slot-container" >
+                <div class= "slot">
+                    <div class="slotname">Nancy Ree</div>
+                    <div id="slotparty">The Real Nancy Party</div>
+                    <input type="checkbox" name="meister" class="slotAccept">
+                </div>
+            </div>
+
+            <div class="slot-container" >
+                <div class= "slot">
+                    <div class="slotname">Nancy Ree</div>
+                    <div id="slotparty">The Real Nancy Party</div>
+                    <input type="checkbox" name="meister" class="slotAccept">
+                </div>
+            </div>
+
+-->
+
+
+        </div>
+
+
+
+        <div class="footer"> 
+            <button id="saveButton">SUBMIT BALLOT</button>
+        </div>
+
+
+
+    </div>
+
+    
+    <script src="./index.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+        $(document).ready(function(){
+        
+
+        $("#slot1Accept").click(function(){
+            if($(this).is(":checked")){
+                $("#slot2Accept").prop( "checked", false );
+                $("#slot3Accept").prop( "checked", false );
+                $("#slot4Accept").prop( "checked", false );
+                $("#slot5Accept").prop( "checked", false );
+                $("#errorText").hide("400");
+                $(".footer").show();
+            }else{
+                $(".footer").hide();
+            }
+            
+        });
+
+        $("#slot2Accept").click(function(){
+            if($(this).is(":checked")){
+                $("#slot1Accept").prop( "checked", false );
+                $("#slot3Accept").prop( "checked", false );
+                $("#slot4Accept").prop( "checked", false );
+                $("#slot5Accept").prop( "checked", false );
+                $("#errorText").hide("400");
+                $(".footer").show();
+            }else{
+                $(".footer").hide();
+            }
+        });
+
+        $("#slot3Accept").click(function(){
+            if($(this).is(":checked")){
+                $("#slot1Accept").prop( "checked", false );
+                $("#slot2Accept").prop( "checked", false );
+                $("#slot4Accept").prop( "checked", false );
+                $("#slot5Accept").prop( "checked", false );
+                $("#errorText").hide("400");
+                $(".footer").show();
+            }else{
+                $(".footer").hide();
+            }
+        });
+
+        $("#slot4Accept").click(function(){
+            if($(this).is(":checked")){
+                $("#slot1Accept").prop( "checked", false );
+                $("#slot2Accept").prop( "checked", false );
+                $("#slot3Accept").prop( "checked", false );
+                $("#slot5Accept").prop( "checked", false );
+                $("#errorText").hide("400");
+                $(".footer").show();
+            }else{
+                $(".footer").hide();
+            }
+        });
+
+        $("#slot5Accept").click(function(){
+            if($(this).is(":checked")){
+                $("#slot1Accept").prop( "checked", false );
+                $("#slot2Accept").prop( "checked", false );
+                $("#slot3Accept").prop( "checked", false );
+                $("#slot4Accept").prop( "checked", false );
+                $("#errorText").hide("400");
+                $(".footer").show();
+            }else{
+                $(".footer").hide();
+            }
+        });
+
+
+
+        $("#saveButton").click(function(){
+
+            $("#contentUI").hide("100");
+            $("#contentSuccess").show("2000");
+
+            if($('#slot1Accept').is(":checked")||$('#slot2Accept').is(":checked")||$('#slot3Accept').is(":checked")||$('#slot4Accept').is(":checked")||$('#slot5Accept').is(":checked")){
+                
+                if($("#slot1Accept").is(":checked")){
+//                    $.post('https://agrp-voting/votedcandidate1', JSON.stringify({save:save}));          -- NUI callback this to your client 
+                        $.post('http://agrp-voting/exit', JSON.stringify({}));
+                        console.log("1 accepted")
+                }
+                if($("#slot2Accept").is(":checked")){
+                    $.post('http://agrp-voting/exit', JSON.stringify({}));
+                    console.log("2 accepted")
+                }
+                if($("#slot3Accept").is(":checked")){
+                    $.post('http://agrp-voting/exit', JSON.stringify({}));
+                    console.log("3 accepted")
+                }
+                if($("#slot4Accept").is(":checked")){
+                    $.post('http://agrp-voting/exit', JSON.stringify({}));
+                    console.log("4 accepted")
+                }
+                if($("#slot5Accept").is(":checked")){
+                    $.post('http://agrp-voting/exit', JSON.stringify({}));
+                    console.log("5 accepted")
+                }
+
+            }else{
+                console.log("NO one is selected")
+                $("#errorText").show("400");
+                
+            }
+            
+            
+
+           
+        })
+    });
+    </script>
+    
+</body>
+</html>
