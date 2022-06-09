@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+#contentUI {
+    display: block;
+
+}
+
+#contentAlready{
+    display: none;
+}
+
+
+#contentSuccess{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+.container{
+    width: 850px;
+    height: 980px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(34, 40, 50);
+    border-radius: 10px;
+}
+
+.header{
+    width: 100%;
+    height: 95px;
+}
+
+.lefthead1{
+    font-size: 23px;
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    top: -5px;
+    left: 15px;
+
+}
+
+.lefthead2{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 58px;
+    left: 15px;
+}
+
+.righthead1{
+    font-size: 23px;
+    font-weight: 300;
+    color: white;
+    position: absolute;
+    top: -10px;
+    left: 675px;
+}
+
+.righthead2{
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+    position: absolute;
+    top: 58px;
+    left: 720px;
+}
+
+.header img{
+    width: 35px;
+    height: 32px;
+
+    position: relative;
+    left: 630px;
+    top: 10px;
+}
+
+
+
+
+hr{
+    margin-top: 15px;
+    margin-left:15px;
+    width: 820px;
+    border-width:1;
+    position: absolute;
+    border-width:1px;
+    color:white;
+}
+
+
+
+
+.voters{
+    width: 100%;
+    height: 750px;
+    overflow-y: auto;
+}
+
+
+.voters::-webkit-scrollbar {
+    display: none;
+}
+
+
+.slot {
+    width: 820px;
+    height: 90px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 15px;
+    background-color: rgb(48, 71, 93);
+}
+
+.slotname{
+    padding-top: 10px;
+    margin-left: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#slotparty{
+    padding-top: 20px;
+    margin-left: 20px;
+    color: white;
+    font-size: 15px;
+}
+
+
+.slot input{
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    border-radius: 15px;
+    background-color: #d5d5d5;
+    left: 700px;
+    top: -68px;
+    width: 80px;
+    height: 75px;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.slot input::after{
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+    display: none;
+    transition: .4s;
+}
+
+.slot input:checked{
+    background-color: white;
+    transition: .4s;
+
+}
+
+.slot input:checked::after{
+    display: block;
+    transition: .4s;
+    color: rgb(34, 40, 50);
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#close{
+    width: 20px;
+    height: 20px;
+
+    background-color: rgb(255, 50, 50);
+    position: absolute;
+    right: 10px;
+    top: 5px;
+
+    border-radius: 4px;
+    transition: .4s;
+}
+
+#close:hover{
+    transition: .4s;
+    cursor: pointer;
+    background-color: rgb(255, 77, 77);
+    border-radius: 2rem;
+}
+
+
+
+
+#content{
+    width: 600px;
+    height: 400px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    background-color: rgb(86, 136, 228);
+}
+
+
+
+
+
+
+/*
+.slot:hover{
+    box-shadow: inset 0 0 0 0.5rem rgb(68, 109, 185);
+    transition: .3s;
+}
+
+*/
+
+.slot img{
+    width: 50px;
+    height: 50px;
+
+    position: relative;
+    left: 20px;
+    top: 25px;
+}
+
+.slot h2{
+    position: absolute;
+    left: 120px;
+    color: rgb(68, 109, 185);
+}
+
+
+
+
+
+
+#slot2Name{
+    position: relative;
+    color:white;
+    left: 20px;
+    top: 5px;
+}
+
+#slot3Name{
+    position: relative;
+    color:white;
+    left: 20px;
+    top: 5px;
+}
+
+#slot4Name{
+    position: relative;
+    color:white;
+    left: 20px;
+    top: 5px;
+}
+
+#slot5Name{
+    position: relative;
+    color:white;
+    left: 20px;
+    top: 5px;
+}
+
+
+#genderSlot1{
+    position: relative;
+    left: 90px;
+    top: -60px;
+
+    color: rgb(115, 155, 230);
+}
+
+#genderSlot2{
+    position: relative;
+    left: 90px;
+    top: -60px;
+
+    color: rgb(115, 155, 230);
+}
+
+#genderSlot3{
+    position: relative;
+    left: 90px;
+    top: -60px;
+
+    color: rgb(115, 155, 230);
+}
+
+
+
+
+
+.footer{
+    display: none;    
+}
+
+
+#saveButton{
+    position: absolute;
+    left: 705px;
+    bottom: 40px;
+
+    width: 130px;
+    height: 30px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(34, 40, 50);
+
+    outline: none;
+
+    background-color: #82DD61;
+
+    transition: .4s;
+}
+
+#saveButton:hover{
+    cursor:pointer;
+    transition: .4s;
+    box-shadow: 1px -1px 2px 0 rgb(0, 0, 0);
+}
+
+#saveButton:hover:after{
+    transform: rotate(150deg);
+}
+
+#errorText{
+    color: rgb(212, 33, 33);
+    margin-top: 50px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#infoBox{
+    width: 600px;
+    height: 170px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50px;
+    top: 110px;
+    background-color: rgb(86, 136, 228);
+}
+
+#contentAlready h2{
+    color: white;
+    
+    position: absolute;
+
+    top: -4px;
+    left: 210px;
+
+    font-size: 50px;
+}
+
+#infoBox img{
+    width: 80px;
+    height: 80px;
+
+    position: absolute;
+    top: 52px;
+    left: 50px;
+
+}
+
+#infoContent{
+    width: 400px;
+    height: 100px;
+    margin: 25px;
+
+    border-radius: 5px;
+
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background-color: whitesmoke;
+    transition: .5s;
+}
+
+#infoContent:hover{
+    box-shadow: inset 0 0 0 0.5rem rgb(68, 109, 185);
+    transition: .3s;
+}
+
+
+#infoContent p {
+    color: rgb(68, 109, 185);
+    padding-left: 10px;
+}
+
+
+
+
+
+#contentAlready button{
+    position: absolute;
+    left: 245px;
+    top: 300px;
+
+    width: 200px;
+    height: 50px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 80px;
+    color:white;
+
+    outline: none;
+
+    background-color: #5bcd3e;
+
+    transition: .4s;
+}
+
+#contentAlready button:hover{
+    transition: .4s;
+ 
+    background-color: #5bcd3e;
+    border-radius: 2rem;
+
+}
+
+
+
+
+
+#contentCheck h2{
+    color: white;
+
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
+
+    font-size: 40px;
+}
+
+#contentCheck h3{
+    color: white;
+
+    width: 100%;
+    text-align: center;
+    margin-top: -50px;
+
+    font-size: 30px;
+}
+
+
+
+
+#circle{
+
+    background-color: #5bcd3e;
+
+    width: 140px;
+    height: 140px;
+
+    position: relative;
+    left: 270px;
+    top: 50px;
+    
+
+    border-radius: 50%;
+
+}
+
+
+
+
+#contentSuccess h1{
+    color: white;
+    font-size: 17px;
+    font-weight: 250;
+    text-transform: uppercase;
+
+    position: relative;
+    left: 250px;
+    top: 100px
+}    
+
+
+#contentSuccess h2{
+    color: white;
+    font-size: 25px;
+    font-weight: 550;
+    text-transform: uppercase;
+
+    position: relative;
+    left: 290px;
+    top: 200px
+}
+
+
+#success{
+    color: white;
+    font-size: 80px;
+
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+
+#contentSuccess button{
+    width: 200px;
+    height: 50px;
+
+    border: none;
+    border-radius: 20px;
+
+    position: relative;
+    left: 250px;
+    top: 50px;
+    
+    font-size: 20px;
+    color: rgb(68, 109, 185);
+    font-weight: 700;
+    transition: .3s;
+    outline: none;
+}
+
+#contentSuccess button:hover{
+    transition: .3s;
+    color: white;
+    background-color: #5bcd3e;
+
+}
+
+
