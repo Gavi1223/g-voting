@@ -18,8 +18,6 @@ files({
     'html/index.html',
     'html/index.js',
     'html/main.css',
-    'html/Assets/user.png',
-    'html/Assets/info.png',
     'html/Assets/votingicon.png'
 })
 
